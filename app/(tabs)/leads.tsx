@@ -148,7 +148,7 @@ export default function Leads() {
     sortOrder: 'desc' as 'asc' | 'desc'
   });
 
-  const filters = ['All', 'Hot', 'Warm', 'Cold'];
+  const statusFilterOptions = ['All', 'Hot', 'Warm', 'Cold'];
 
   const applyFilters = (leads: Lead[]) => {
     let filtered = [...leads];
@@ -318,7 +318,7 @@ export default function Leads() {
 
       <View style={styles.filterContainer}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          {filters.map((filter) => (
+          {statusFilterOptions.map((filter) => (
             <TouchableOpacity
               key={filter}
               style={[
